@@ -511,7 +511,7 @@ class WizardUpdateChartsAccounts(models.TransientModel):
     def find_accounts_by_templates(self, templates):
         account_ids = []
         for account in templates:
-            account_ids.append(self.find_tax_by_templates(account))
+            account_ids.append(self.find_account_by_templates(account))
         return self.env["account.account"].browse(account_ids)
 
     @tools.ormcache("templates")
@@ -1071,9 +1071,10 @@ class WizardUpdateChartsAccounts(models.TransientModel):
                 tax.write(vals)
                 done |= tax
 
-        for k, v in todo_dict["account_dict"]["account.tax.repartition.line"].items():
+        for rep_line, v in todo_dict["account_dict"][
+            "account.tax.repartition.line"
+        ].items():
             if v["account_id"]:
-                rep_line = self.env["account.tax.repartition.line"].browse(k)
                 acc_id = self.find_account_by_templates(
                     self.env["account.account.template"].browse(v["account_id"].id)
                 )
