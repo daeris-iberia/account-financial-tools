@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: account-financial-tools (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-07 17:54+0000\n"
-"PO-Revision-Date: 2022-10-07 20:07+0200\n"
+"PO-Revision-Date: 2022-10-16 10:31+0200\n"
 "Last-Translator: Luis D. Lafaurie <luislafaurie@hotmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -65,7 +65,7 @@ msgstr "Cuenta de activo"
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__carry_forward_missed_depreciations
 msgid "Accumulate missed depreciations"
-msgstr "Acumular amortizaciones pendientes"
+msgstr "Acumular depreciaciones pendientes"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_needaction
@@ -113,7 +113,7 @@ msgstr "Añada aquí una nota interna..."
 #: model:ir.model.fields,help:account_asset_management.field_account_asset_compute__date_end
 msgid "All depreciation lines prior to this date will be automatically posted"
 msgstr ""
-"Todas las líneas de amortización anteriores a esta fecha serán publicadas "
+"Todas las líneas de depreciación anteriores a esta fecha serán publicadas "
 "automáticamente"
 
 #. module: account_asset_management
@@ -129,7 +129,7 @@ msgstr "Importe"
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__depreciated_value
 msgid "Amount Already Depreciated"
-msgstr "Importe ya amortizado"
+msgstr "Importe ya depreciado"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
@@ -264,7 +264,7 @@ msgstr "Fecha de inicio del activo"
 #. module: account_asset_management
 #: model:ir.model,name:account_asset_management.model_account_asset_line
 msgid "Asset depreciation table line"
-msgstr "Línea de amortización del activo"
+msgstr "Línea de depreciación del activo"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_move.py:0
@@ -360,10 +360,10 @@ msgid ""
 "time between 2 depreciations.\n"
 msgstr ""
 "Seleccione el método para calcular las fechas y el número de líneas de "
-"amortización.\n"
-"   * Número de años: especifique el número de años de la amortización.\n"
-"   * Número de amortizaciones: fije el número de líneas de amortización y el "
-"tiempo entre 2 amortizaciones.\n"
+"depreciación.\n"
+"   * Número de años: especifique el número de años de la depreciación.\n"
+"   * Número de depreciaciones: fije el número de líneas de depreciación y el "
+"tiempo entre 2 depreciaciones.\n"
 
 #. module: account_asset_management
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__method
@@ -381,18 +381,18 @@ msgid ""
 "   * Degressive-Limit: Degressive up to Salvage Value. The Depreciation Base "
 "is equal to the asset value."
 msgstr ""
-"Seleccione el método para calcular las líneas de amortización.\n"
-"  * Lineal: Calculado en base a: Base Amortizable / Número de "
-"Amortizaciones. Base Amortizable = Valor de Compra - Valor Residual.\n"
-"  * Lineal-Limit: Lineal hasta el Valor de rescate. Base Amortizable = Valor "
+"Seleccione el método para calcular las líneas de depreciación.\n"
+"  * Lineal: Calculado en base a: Base Depreciable / Número de "
+"depreciaciones. Base Depreciable = Valor de Compra - Valor Residual.\n"
+"  * Lineal-Limit: Lineal hasta el Valor de rescate. Base Depreciable = Valor "
 "de Compra.\n"
 "  * Decreciente: Calculado en base a: Valor Residual * Coeficiente de "
-"Amortización.\n"
+"depreciación.\n"
 "  * Decreciente-Lineal (solo para Periodo de Tiempo = Año): Decreciente se "
-"convierte en lineal cuando la amortización lineal anual supera la "
-"amortización decreciente anual.\n"
+"convierte en lineal cuando la depreciación lineal anual supera la "
+"depreciación decreciente anual.\n"
 "   * Decreciente-Limit: Decreciente hasta el Valor de rescate. La Base "
-"Amortizable es igual al valor del activo."
+"Depreciable es igual al valor del activo."
 
 #. module: account_asset_management
 #: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__close
@@ -456,7 +456,7 @@ msgstr "Calcular activo"
 #: model:ir.model,name:account_asset_management.model_account_asset_compute
 #: model:ir.ui.menu,name:account_asset_management.account_asset_compute_menu
 msgid "Compute Assets"
-msgstr "Calcular amortizaciones"
+msgstr "Calcular depreciaciones"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/wizard/account_asset_compute.py:0
@@ -560,7 +560,7 @@ msgstr "Decreciente"
 #: code:addons/account_asset_management/models/account_asset_profile.py:0
 #, python-format
 msgid "Degressive  up to Salvage Value"
-msgstr "Regresivo hasta valor de rescate"
+msgstr "Decreciente hasta valor de rescate"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_progress_factor
@@ -589,22 +589,22 @@ msgstr "Borrar/Deshacer movimiento"
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_expense_depreciation_id
 msgid "Depr. Expense Account"
-msgstr "Cuenta de gastos de amortización"
+msgstr "Cuenta de gastos de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__value_depreciated
 msgid "Depreciated Value"
-msgstr "Valor amortizado"
+msgstr "Valor depreciado"
 
 #. module: account_asset_management
 #: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_line__type__depreciate
 msgid "Depreciation"
-msgstr "Amortización"
+msgstr "Depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_depreciation_id
 msgid "Depreciation Account"
-msgstr "Cuenta de amortización"
+msgstr "Cuenta de depreciación"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
@@ -613,39 +613,39 @@ msgstr "Cuenta de amortización"
 #: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_line__type__create
 #, python-format
 msgid "Depreciation Base"
-msgstr "Base Amortización"
+msgstr "Base depreciación"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
 msgid "Depreciation Board"
-msgstr "Tabla de amortización"
+msgstr "Tabla de depreciación"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
 msgid "Depreciation Dates"
-msgstr "Fechas de amortización"
+msgstr "Fechas de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__move_id
 msgid "Depreciation Entry"
-msgstr "Asiento de amortización"
+msgstr "Asiento de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__depreciation_line_ids
 msgid "Depreciation Lines"
-msgstr "Líneas de amortización"
+msgstr "Líneas de depreciación"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
 msgid "Depreciation Method"
-msgstr "Método de amortización"
+msgstr "Método de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__name
 msgid "Depreciation Name"
-msgstr "Nombre de la amortización"
+msgstr "Nombre de la depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset__display_name
@@ -829,9 +829,9 @@ msgid ""
 "        period."
 msgstr ""
 "Si se crea un activo en un periodo fiscal ya cerrado,\n"
-"        la cantidad de amortización acumulada que no se haya podido "
+"        la cantidad de depreciación acumulada que no se haya podido "
 "registrar será\n"
-"        llevada a la primera línea de amortización del periodo actualmente\n"
+"        llevada a la primera línea de depreciación del periodo actualmente\n"
 "        abierto."
 
 #. module: account_asset_management
@@ -851,11 +851,11 @@ msgid ""
 "(depreciation end date - start date + 1) * days in the current year."
 msgstr ""
 "Si no se marca, el sistema distribuirá de manera uniforme el importe a "
-"amortizar a lo largo de los años, en función de la cantidad de años. Por lo "
+"depreciar a lo largo de los años, en función de la cantidad de años. Por lo "
 "tanto, la cantidad por año será la base de depreciación / número de años.\n"
 " Si se marca, el sistema considerará si el año actual es bisiesto. El "
-"importe a amortizar por año se calculará como base de amortización / (fecha "
-"final de la amortización - fecha inicial + 1) * días en el año actual."
+"importe a depreciar por año se calculará como base de depreciación / (fecha "
+"final de la depreciación - fecha inicial + 1) * días en el año actual."
 
 #. module: account_asset_management
 #: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__allow_reversal
@@ -865,7 +865,7 @@ msgid ""
 "instead of deleting them."
 msgstr ""
 "Si se marca, cuando se presione el botón Borrar/Retroceder Movimiento en una "
-"línea de amortización ya publicada, se lanzará la opción de modificar el "
+"línea de depreciación ya publicada, se lanzará la opción de modificar el "
 "asiento en lugar de borrarlo."
 
 #. module: account_asset_management
@@ -896,8 +896,8 @@ msgid ""
 "Indicates that the first depreciation entry for this asset has to be done "
 "from the depreciation start date instead of the first day of the fiscal year."
 msgstr ""
-"Indica que el primer asiento de amortización para este activo tiene que ser "
-"realizado desde la fecha de inicio de la amortización en lugar del primer "
+"Indica que el primer asiento de depreciación para este activo tiene que ser "
+"realizado desde la fecha de inicio de la depreciación en lugar del primer "
 "día del ejercicio fiscal."
 
 #. module: account_asset_management
@@ -1020,7 +1020,7 @@ msgstr "Cuenta para pérdida de valor"
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
 #, python-format
 msgid "Missing depreciation table"
-msgstr "Falta la tabla de amortización"
+msgstr "Falta la tabla de depreciación"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset_profile.py:0
@@ -1070,7 +1070,7 @@ msgstr "Tipo de la siguiente actividad"
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__remaining_value
 msgid "Next Period Depreciation"
-msgstr "Amortización del siguiente período"
+msgstr "Depreciación del siguiente período"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
@@ -1167,7 +1167,7 @@ msgstr "Empresa"
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
 #, python-format
 msgid "Period Depreciation"
-msgstr "Periodo de amortización"
+msgstr "Periodo de depreciación"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
@@ -1191,7 +1191,7 @@ msgstr "Valor al comienzo del periodo"
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__method_period
 #: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method_period
 msgid "Period length for the depreciation accounting entries"
-msgstr "Longitud del periodo para los asientos de amortización"
+msgstr "Longitud del periodo para los asientos de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_plus_value_id
@@ -1207,7 +1207,7 @@ msgstr "Asentado"
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__previous_id
 msgid "Previous Depreciation Line"
-msgstr "Línea de amortización previa"
+msgstr "Línea de depreciación previa"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
@@ -1265,7 +1265,7 @@ msgid ""
 "Account' or 'Min-Value Account' "
 msgstr ""
 "Política para el asiento de eliminación\n"
-"  * Valor residual: el valor no amortizado será llevado a la \"Cuenta de "
+"  * Valor residual: el valor no depreciado será llevado a la \"Cuenta de "
 "valor residual\"\n"
 "  * Ganancia/Pérdida en la venta: la ganancia o pérdida será llevada a la "
 "\"Cuenta para ganancia de valor\" o a la \"Cuenta para pérdida de valor\" "
@@ -1343,7 +1343,7 @@ msgstr "Revertir movimiento"
 #. module: account_asset_management
 #: model:ir.model,name:account_asset_management.model_wiz_asset_move_reverse
 msgid "Reverse posted journal entry on depreciation line"
-msgstr "Revertir asiento publicado en la línea de amortización"
+msgstr "Revertir asiento publicado en la línea de depreciación"
 
 #. module: account_asset_management
 #: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__open
@@ -1448,7 +1448,7 @@ msgstr ""
 #, python-format
 msgid "The 'account' field is a mandatory entry of the '_xls_%s_fields' list !"
 msgstr ""
-"El campo 'cuenta' es una entrada obligatoria en la lista '_xls_%s_fields'."
+"El campo 'cuenta' es una entrada obligatoria en la lista '_xls_%s_fields' !"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_account.py:0
@@ -1463,7 +1463,7 @@ msgstr ""
 #: code:addons/account_asset_management/wizard/account_asset_remove.py:0
 #, python-format
 msgid "The Sale Value must be positive!"
-msgstr "El valor de venta debe ser positivo."
+msgstr "El valor de venta debe ser positivo!"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset.py:0
@@ -1480,7 +1480,7 @@ msgid ""
 "dates."
 msgstr ""
 "La duración del activo entra en conflicto con la fechas de asiento asentadas "
-"de la tabla de amortización."
+"de la tabla de depreciación."
 
 #. module: account_asset_management
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__salvage_value
@@ -1491,20 +1491,20 @@ msgid ""
 msgstr ""
 "El valor estimado que un activo tendrá hasta su venta al final de su vida "
 "útil.\n"
-"Este valor se usará para determinar los importes de amortización."
+"Este valor se usará para determinar los importes de depreciación."
 
 #. module: account_asset_management
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__method_number
 #: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method_number
 msgid "The number of years needed to depreciate your asset"
-msgstr "El número de años necesario para amortizar su activo"
+msgstr "El número de años necesario para depreciar su activo"
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/wizard/account_asset_remove.py:0
 #, python-format
 msgid "The removal date must be after the last depreciation date."
 msgstr ""
-"La fecha de eliminación debe ser después de la última fecha de amortización."
+"La fecha de eliminación debe ser después de la última fecha de depreciación."
 
 #. module: account_asset_management
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__depreciation_base
@@ -1513,7 +1513,7 @@ msgid ""
 "This amount represent the depreciation base of the asset (Purchase Value - "
 "Salvage Value)."
 msgstr ""
-"Este importe representa la base de amortización del activo (Valor de compra "
+"Este importe representa la base de depreciación del activo (Valor de compra "
 "- Valor de rescate)."
 
 #. module: account_asset_management
@@ -1543,7 +1543,7 @@ msgstr "Método de tiempo"
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
 #, python-format
 msgid "Tot. Depreciation"
-msgstr "Amortización total"
+msgstr "Depreciación total"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
@@ -1554,7 +1554,7 @@ msgstr "Días totales"
 #: code:addons/account_asset_management/report/account_asset_report_xls.py:0
 #, python-format
 msgid "Totals"
-msgstr "Amortización total"
+msgstr "Totales"
 
 #. module: account_asset_management
 #: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__date_trigger
@@ -1602,7 +1602,7 @@ msgstr "Utilizar diario específico"
 #: model:ir.model.fields,help:account_asset_management.field_account_asset__days_calc
 #: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__days_calc
 msgid "Use number of days to calculate depreciation amount"
-msgstr "Usar número de días para calcular el importe de la amortización"
+msgstr "Usar número de días para calcular el importe de la depreciación"
 
 #. module: account_asset_management
 #: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form_result
@@ -1638,8 +1638,8 @@ msgid ""
 msgstr ""
 "Cuando se crea un activo, su estado es 'Borrador'.\n"
 "Si el activo se confirma, su estado pasa a 'En ejecución' y las líneas de "
-"amortización pueden ser publicadas en la contabilidad.\n"
-"Si la última línea de amortización se publica, el activo pasa a estado "
+"depreciación pueden ser publicadas en la contabilidad.\n"
+"Si la última línea de depreciación se publica, el activo pasa a estado "
 "'Cerrado'.\n"
 "Cuando se generan los asientos de eliminación, el activo pasa a estado "
 "'Eliminado'."
@@ -1685,7 +1685,7 @@ msgid ""
 "periods are not posted."
 msgstr ""
 "No puede realizar una eliminación temprana si todos los asientos de las "
-"líneas de amortización para los periodos previos no están generados."
+"líneas de depreciación para los periodos previos no están generados."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset_line.py:0
@@ -1693,7 +1693,7 @@ msgstr ""
 msgid ""
 "You cannot change a depreciation line with an associated accounting entry."
 msgstr ""
-"No puede cambiar una línea de amortización con un asiento contable asociado."
+"No puede cambiar una línea de depreciación con un asiento contable asociado."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_move.py:0
@@ -1701,7 +1701,7 @@ msgstr ""
 msgid ""
 "You cannot change an accounting entry linked to an asset depreciation line."
 msgstr ""
-"No puede cambiar un asiento contable enlazado a una línea de amortización de "
+"No puede cambiar un asiento contable enlazado a una línea de depreciación de "
 "un activo."
 
 #. module: account_asset_management
@@ -1710,7 +1710,7 @@ msgstr ""
 msgid ""
 "You cannot change an accounting item linked to an asset depreciation line."
 msgstr ""
-"No puede cambiar un apunte contable enlazado a una línea de amortización de "
+"No puede cambiar un apunte contable enlazado a una línea de depreciación de "
 "activo."
 
 #. module: account_asset_management
@@ -1724,21 +1724,21 @@ msgstr "No puede cambiar la categoría de un activo con asientos contables."
 #, python-format
 msgid ""
 "You cannot delete a depreciation line with an associated accounting entry."
-msgstr "No puede eliminar una línea de amortización con un asiento enlazado."
+msgstr "No puede eliminar una línea de depreciación con un asiento enlazado."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset.py:0
 #, python-format
 msgid "You cannot delete an asset that contains posted depreciation lines."
 msgstr ""
-"No puede eliminar un activo que contenga líneas de amortización asentadas."
+"No puede eliminar un activo que contenga líneas de depreciación asentadas."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset_line.py:0
 #, python-format
 msgid "You cannot remove an asset line of type 'Depreciation Base'."
 msgstr ""
-"No puede eliminar una linea de amortización de tipo 'Base Amortización'."
+"No puede eliminar una linea de depreciación de tipo 'Base depreciación'."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset_line.py:0
@@ -1748,14 +1748,14 @@ msgid ""
 "prior posted entries."
 msgstr ""
 "No puede establecer la casilla 'Asiento de saldo inicial' en una línea de "
-"amortización con asientos anteriores ya generados."
+"depreciación con asientos anteriores ya generados."
 
 #. module: account_asset_management
 #: code:addons/account_asset_management/models/account_asset_line.py:0
 #, python-format
 msgid "You cannot set the Asset Start Date after already posted entries."
 msgstr ""
-"No puede establecer la fecha de inicio posterior a amortizaciones ya "
+"No puede establecer la fecha de inicio posterior a depreciaciones ya "
 "contabilizadas."
 
 #. module: account_asset_management
@@ -1765,7 +1765,7 @@ msgid ""
 "You cannot set the date on a depreciation line prior to already posted "
 "entries."
 msgstr ""
-"No puede establecer la fecha de la línea de amortización anterior a los "
+"No puede establecer la fecha de la línea de depreciación anterior a los "
 "asientos ya generados."
 
 #. module: account_asset_management
@@ -1775,8 +1775,8 @@ msgid ""
 "previous fiscal years if the Depreciation Start Date is different from the "
 "date for which accounting entries need to be generated."
 msgstr ""
-"Debe añadir manualmente las líneas de amortización con las amortizaciones de "
-"ejercicios fiscales anteriores si la fecha de inicio de amortización es "
+"Debe añadir manualmente las líneas de depreciación con las depreciaciones de "
+"ejercicios fiscales anteriores si la fecha de inicio de depreciación es "
 "diferente de la fecha para la cual se deben generar asientos contables."
 
 #. module: account_asset_management
