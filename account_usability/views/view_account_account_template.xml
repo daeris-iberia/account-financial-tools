@@ -17,5 +17,6 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         action="account_account_template_action"
         parent="menu_account_coa_settings"
         sequence="20"
+        groups="base.group_no_one"
     />
 </odoo>
